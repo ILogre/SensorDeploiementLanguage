@@ -8,7 +8,7 @@ import shared._
 case class SensorDescription(sensor:Sensor, emit:EmissionType, observe:Observation)
 
 sealed trait Observation {
-  val observationDescription: ObservationDescription[DataType]
+  val observationDescription: ObservationDescription[_<:DataType]
 }
 case class Opening() extends Observation {
   override val observationDescription = ObservationDescription[StringType](DiscreteValues(Set(StringType("opened"), StringType("closed"))))
@@ -29,11 +29,11 @@ case class Motion() extends Observation {
   override val observationDescription = ObservationDescription[StringType](DiscreteValues(Set(StringType("motion"))))
 }
 
-case class ObservationDescription[+T:DataType](range: DataRange[T])
-sealed abstract class DataRange[+T:DataType]
+case class ObservationDescription[T<:DataType](range: DataRange[T])
+sealed abstract class DataRange[T<:DataType]
 
-case class ContinuousValues[+T:DataType](min:T, max:T) extends DataRange[T]
-case class DiscreteValues[+T:DataType](values: Set[T]) extends DataRange[T]
+case class ContinuousValues[T<:DataType](min:T, max:T) extends DataRange[T]
+case class DiscreteValues[T<:DataType](values: Set[T]) extends DataRange[T]
 
 sealed abstract class EmissionType()
 case class PeriodicEmission(period:Int) extends EmissionType
