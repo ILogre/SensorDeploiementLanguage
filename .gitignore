@@ -1,0 +1,6 @@
+*.class
+*.info
+MPS/*/languages/*/source_gen.caches/*
+MPS/*/languages/*/source_gen/*
+MPS/*/languages/*/generator/source_gen.caches/*
+MPS/*/languages/*/generator/source_gen/*
