@@ -1,0 +1,1 @@
+This implementation of the Smart Campus sensor deployement language use MPS 3.3 EAP.
