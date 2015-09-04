@@ -178,6 +178,7 @@
     <property role="TrG5h" value="Field" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
+    <property role="34LRSv" value="field" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7f4vQq$wAKX" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -191,16 +192,18 @@
   </node>
   <node concept="1TIwiD" id="7f4vQq$wAKe">
     <property role="TrG5h" value="AtomicField" />
+    <property role="34LRSv" value="atomic" />
     <ref role="1TJDcQ" node="7f4vQq$wAK4" resolve="Field" />
   </node>
   <node concept="1TIwiD" id="7f4vQq$wAKf">
     <property role="TrG5h" value="Calculated" />
+    <property role="34LRSv" value="calculated" />
     <ref role="1TJDcQ" node="7f4vQq$wAK4" resolve="Field" />
     <node concept="1TJgyj" id="7f4vQq$wAKz" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="operands" />
       <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="7f4vQq$wAKw" resolve="Operand" />
+      <ref role="20lvS9" node="4pVqDb3GlBW" resolve="Source" />
     </node>
     <node concept="1TJgyi" id="7f4vQq$wAKu" role="1TKVEl">
       <property role="TrG5h" value="operator" />
@@ -302,6 +305,22 @@
   <node concept="Az7Fb" id="7f4vQq$wD9Y">
     <property role="TrG5h" value="Float" />
     <property role="FLfZY" value="-?[0-9]+\\.[0-9]*" />
+  </node>
+  <node concept="1TIwiD" id="4pVqDb3GlBW">
+    <property role="TrG5h" value="Source" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4pVqDb3GlBX" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20lbJX" value="1" />
+      <property role="20kJfa" value="observation" />
+      <ref role="20lvS9" node="7f4vQq$wAJU" resolve="Observation" />
+    </node>
+    <node concept="1TJgyj" id="4pVqDb3GlBZ" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20lbJX" value="1" />
+      <property role="20kJfa" value="field" />
+      <ref role="20lvS9" node="7f4vQq$wAK4" resolve="Field" />
+    </node>
   </node>
 </model>
 

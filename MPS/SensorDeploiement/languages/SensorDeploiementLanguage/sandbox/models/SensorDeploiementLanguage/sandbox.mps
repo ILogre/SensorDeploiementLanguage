@@ -7,6 +7,10 @@
   <imports />
   <registry>
     <language id="22c1a4ea-9dda-4f09-a705-c0f4af22f6a5" name="SensorDeploiementLanguage">
+      <concept id="5078770183371315708" name="SensorDeploiementLanguage.structure.Source" flags="ng" index="25MzdI">
+        <reference id="5078770183371315711" name="field" index="25MzdH" />
+        <reference id="5078770183371315709" name="observation" index="25MzdJ" />
+      </concept>
       <concept id="8341932488620403750" name="SensorDeploiementLanguage.structure.Continuous" flags="ng" index="3nhxd0">
         <child id="8341932488620403763" name="min" index="3nhxdl" />
       </concept>
@@ -23,6 +27,10 @@
         <child id="8341932488620403773" name="range" index="3nhxdr" />
       </concept>
       <concept id="8341932488620403726" name="SensorDeploiementLanguage.structure.AtomicField" flags="ng" index="3nhxdC" />
+      <concept id="8341932488620403727" name="SensorDeploiementLanguage.structure.Calculated" flags="ng" index="3nhxdD">
+        <property id="8341932488620403742" name="operator" index="3nhxdS" />
+        <child id="8341932488620403747" name="operands" index="3nhxd5" />
+      </concept>
       <concept id="8341932488620403706" name="SensorDeploiementLanguage.structure.Observation" flags="ng" index="3nhxis">
         <child id="8341932488620403719" name="time" index="3nhxdx" />
         <child id="8341932488620403721" name="values" index="3nhxdJ" />
@@ -78,17 +86,52 @@
     </node>
     <node concept="3nhxis" id="4pVqDb3G8cS" role="3nhxdB">
       <property role="TrG5h" value="SmartCampusTemperature" />
-      <node concept="3nhxdy" id="4pVqDb3G8cT" role="3nhxdx">
+      <node concept="3nhxdC" id="4pVqDb3GlAH" role="3nhxdx">
         <property role="TrG5h" value="t" />
-        <node concept="3nhxd0" id="4pVqDb3G8da" role="3nhxdr">
-          <node concept="3nhxde" id="4pVqDb3G8dd" role="3nhxdl">
+        <node concept="3nhxd0" id="4pVqDb3GlAR" role="3nhxdr">
+          <node concept="3nhxde" id="4pVqDb3GlAU" role="3nhxdl">
             <property role="3nhxdf" value="0" />
           </node>
         </node>
       </node>
-      <node concept="3nhxdy" id="4pVqDb3G8cV" role="3nhxdJ">
+      <node concept="3nhxdC" id="4pVqDb3GlAW" role="3nhxdJ">
         <property role="TrG5h" value="v" />
-        <node concept="3nhxd0" id="4pVqDb3G8df" role="3nhxdr" />
+        <node concept="3nhxd0" id="4pVqDb3GlB4" role="3nhxdr" />
+      </node>
+    </node>
+    <node concept="3nhxis" id="4pVqDb3GlB9" role="3nhxdB">
+      <property role="TrG5h" value="SmartCampusShame" />
+      <node concept="3nhxdD" id="4pVqDb3GlBF" role="3nhxdx">
+        <property role="TrG5h" value="time" />
+        <property role="3nhxdS" value="Intersection" />
+        <node concept="3nhxd0" id="4pVqDb3GlBR" role="3nhxdr">
+          <node concept="3nhxde" id="4pVqDb3GlBU" role="3nhxdl">
+            <property role="3nhxdf" value="0" />
+          </node>
+        </node>
+        <node concept="25MzdI" id="4pVqDb3H3Cr" role="3nhxd5">
+          <ref role="25MzdJ" node="4pVqDb3G8cS" resolve="SmartCampusTemperature" />
+          <ref role="25MzdH" node="4pVqDb3GlAH" resolve="t" />
+        </node>
+        <node concept="25MzdI" id="4pVqDb3H3Cu" role="3nhxd5">
+          <ref role="25MzdJ" node="7f4vQq$wBzx" resolve="SmartCampusOpenClose" />
+          <ref role="25MzdH" node="7f4vQq$wBzF" resolve="time" />
+        </node>
+      </node>
+      <node concept="3nhxdC" id="4pVqDb3H6mC" role="3nhxdJ">
+        <property role="TrG5h" value="temp" />
+        <node concept="3nhxd0" id="4pVqDb3H6mI" role="3nhxdr" />
+      </node>
+      <node concept="3nhxdC" id="4pVqDb3H6mW" role="3nhxdJ">
+        <property role="TrG5h" value="state" />
+        <node concept="3nhxdu" id="4pVqDb3H6na" role="3nhxdr">
+          <node concept="3nhxd8" id="4pVqDb3H6ni" role="3nhxdv">
+            <property role="3nhxd9" value="OPENED" />
+          </node>
+          <node concept="3nhxd8" id="4pVqDb3H6nr" role="3nhxdv">
+            <property role="3nhxd9" value="CLOSED" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="3nhyhy" id="7f4vQq$wA6U" role="3nhy9R">
@@ -121,6 +164,12 @@
             <property role="3nhx$4" value="localhost/data/door443.json" />
             <property role="3nhx$e" value="the door is closed or opened" />
             <ref role="3nhwpS" node="7f4vQq$wBzx" resolve="SmartCampusOpenClose" />
+          </node>
+          <node concept="3nhx$1" id="4pVqDb3H6ol" role="3nhy9P">
+            <property role="TrG5h" value="OvenOrFridge443" />
+            <property role="3nhx$4" value="localhost/data/ovenfridge443" />
+            <property role="3nhx$e" value="the door is closed or opened and the temperature sensor is up" />
+            <ref role="3nhwpS" node="4pVqDb3GlB9" resolve="SmartCampusShame" />
           </node>
         </node>
       </node>
