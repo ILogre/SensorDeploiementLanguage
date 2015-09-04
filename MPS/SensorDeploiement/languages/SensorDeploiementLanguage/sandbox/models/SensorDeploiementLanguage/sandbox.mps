@@ -8,14 +8,10 @@
   <registry>
     <language id="22c1a4ea-9dda-4f09-a705-c0f4af22f6a5" name="SensorDeploiementLanguage">
       <concept id="8341932488620403750" name="SensorDeploiementLanguage.structure.Continuous" flags="ng" index="3nhxd0">
-        <child id="8341932488620403765" name="max" index="3nhxdj" />
         <child id="8341932488620403763" name="min" index="3nhxdl" />
       </concept>
       <concept id="8341932488620403758" name="SensorDeploiementLanguage.structure.String" flags="ng" index="3nhxd8">
         <property id="8341932488620403759" name="value" index="3nhxd9" />
-      </concept>
-      <concept id="8341932488620403755" name="SensorDeploiementLanguage.structure.Float" flags="ng" index="3nhxdd">
-        <property id="8341932488620413564" name="value" index="3nhIOq" />
       </concept>
       <concept id="8341932488620403752" name="SensorDeploiementLanguage.structure.Integer" flags="ng" index="3nhxde">
         <property id="8341932488620403753" name="value" index="3nhxdf" />
@@ -58,12 +54,10 @@
     <node concept="3nhxis" id="7f4vQq$wBzx" role="3nhxdB">
       <property role="TrG5h" value="SmartCampusOpenClose" />
       <node concept="3nhxdC" id="7f4vQq$wBzF" role="3nhxdx">
+        <property role="TrG5h" value="time" />
         <node concept="3nhxd0" id="7f4vQq$wBzN" role="3nhxdr">
-          <node concept="3nhxde" id="7f4vQq$wBzQ" role="3nhxdl">
+          <node concept="3nhxde" id="7f4vQq$wQj7" role="3nhxdl">
             <property role="3nhxdf" value="0" />
-          </node>
-          <node concept="3nhxdd" id="7f4vQq$wDXg" role="3nhxdj">
-            <property role="3nhIOq" value="-1.0" />
           </node>
         </node>
       </node>
@@ -91,7 +85,7 @@
           <node concept="3nhx$1" id="7f4vQq$wB$n" role="3nhy9P">
             <property role="TrG5h" value="door_443" />
             <property role="3nhx$4" value="localhost/data/door443.json" />
-            <property role="3nhx$e" value="When the door is closed or opened" />
+            <property role="3nhx$e" value="the door is closed or opened" />
             <ref role="3nhwpS" node="7f4vQq$wBzx" resolve="SmartCampusOpenClose" />
           </node>
         </node>
