@@ -16,6 +16,9 @@
         <reference id="1083171729157" name="memberDataType" index="M4eZT" />
         <child id="1083172003582" name="member" index="M5hS2" />
       </concept>
+      <concept id="1082978499127" name="jetbrains.mps.lang.structure.structure.ConstrainedDataTypeDeclaration" flags="ng" index="Az7Fb">
+        <property id="1083066089218" name="constraint" index="FLfZY" />
+      </concept>
       <concept id="1083171877298" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ig" index="M4N5e">
         <property id="1083923523172" name="externalValue" index="1uS6qo" />
         <property id="1083923523171" name="internalValue" index="1uS6qv" />
@@ -268,9 +271,9 @@
   <node concept="1TIwiD" id="7f4vQq$wAKF">
     <property role="TrG5h" value="Float" />
     <ref role="1TJDcQ" node="7f4vQq$wAKB" resolve="DataType" />
-    <node concept="1TJgyi" id="7f4vQq$wAKG" role="1TKVEl">
+    <node concept="1TJgyi" id="7f4vQq$wD9W" role="1TKVEl">
       <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+      <ref role="AX2Wp" node="7f4vQq$wD9Y" resolve="Float" />
     </node>
   </node>
   <node concept="1TIwiD" id="7f4vQq$wAKI">
@@ -290,6 +293,10 @@
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="7f4vQq$wAKB" resolve="DataType" />
     </node>
+  </node>
+  <node concept="Az7Fb" id="7f4vQq$wD9Y">
+    <property role="TrG5h" value="Float" />
+    <property role="FLfZY" value="-?[0-9]+\\.[0-9]*" />
   </node>
 </model>
 
