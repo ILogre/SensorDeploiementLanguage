@@ -30,6 +30,9 @@
       <concept id="8341932488620402279" name="SensorDeploiementLanguage.structure.Event_Based" flags="ng" index="3nhx$1">
         <property id="8341932488620402280" name="trigger" index="3nhx$e" />
       </concept>
+      <concept id="8341932488620402276" name="SensorDeploiementLanguage.structure.Periodic" flags="ng" index="3nhx$2">
+        <property id="8341932488620402277" name="period" index="3nhx$3" />
+      </concept>
       <concept id="8341932488620402273" name="SensorDeploiementLanguage.structure.Sensor" flags="ng" index="3nhx$7">
         <property id="8341932488620402274" name="uri" index="3nhx$4" />
         <reference id="8341932488620407070" name="observes" index="3nhwpS" />
@@ -73,15 +76,46 @@
         </node>
       </node>
     </node>
+    <node concept="3nhxis" id="4pVqDb3G8cS" role="3nhxdB">
+      <property role="TrG5h" value="SmartCampusTemperature" />
+      <node concept="3nhxdy" id="4pVqDb3G8cT" role="3nhxdx">
+        <property role="TrG5h" value="t" />
+        <node concept="3nhxd0" id="4pVqDb3G8da" role="3nhxdr">
+          <node concept="3nhxde" id="4pVqDb3G8dd" role="3nhxdl">
+            <property role="3nhxdf" value="0" />
+          </node>
+        </node>
+      </node>
+      <node concept="3nhxdy" id="4pVqDb3G8cV" role="3nhxdJ">
+        <property role="TrG5h" value="v" />
+        <node concept="3nhxd0" id="4pVqDb3G8df" role="3nhxdr" />
+      </node>
+    </node>
     <node concept="3nhyhy" id="7f4vQq$wA6U" role="3nhy9R">
       <property role="3nhy95" value="Building" />
       <property role="TrG5h" value="Templiers 1" />
       <node concept="3nhyhy" id="7f4vQq$wApj" role="3nhy9P">
         <property role="3nhy95" value="Floor" />
         <property role="TrG5h" value="4" />
+        <node concept="3nhyhy" id="4pVqDb3Getw" role="3nhy9P">
+          <property role="3nhy95" value="Office" />
+          <property role="TrG5h" value="444" />
+          <node concept="3nhx$2" id="4pVqDb3GetM" role="3nhy9P">
+            <property role="TrG5h" value="temp_444" />
+            <property role="3nhx$4" value="localhost/data/temp444.json" />
+            <property role="3nhx$3" value="1" />
+            <ref role="3nhwpS" node="4pVqDb3G8cS" resolve="SmartCampusTemperature" />
+          </node>
+        </node>
         <node concept="3nhyhy" id="7f4vQq$wApp" role="3nhy9P">
           <property role="3nhy95" value="Office" />
           <property role="TrG5h" value="443" />
+          <node concept="3nhx$2" id="4pVqDb3Gcny" role="3nhy9P">
+            <property role="TrG5h" value="temp_443" />
+            <property role="3nhx$4" value="localhost/data/temp443.json" />
+            <property role="3nhx$3" value="2" />
+            <ref role="3nhwpS" node="4pVqDb3G8cS" resolve="SmartCampusTemperature" />
+          </node>
           <node concept="3nhx$1" id="7f4vQq$wB$n" role="3nhy9P">
             <property role="TrG5h" value="door_443" />
             <property role="3nhx$4" value="localhost/data/door443.json" />
