@@ -63,7 +63,7 @@
   <node concept="3nhyh_" id="7f4vQq$wA6T">
     <property role="TrG5h" value="SmartCampusSensors" />
     <node concept="3nhxis" id="7f4vQq$wBzx" role="3nhxdB">
-      <property role="TrG5h" value="SmartCampusOpenClose" />
+      <property role="TrG5h" value="SC_OpenClose" />
       <node concept="3nhxdC" id="7f4vQq$wBzF" role="3nhxdx">
         <property role="TrG5h" value="time" />
         <node concept="3nhxd0" id="7f4vQq$wBzN" role="3nhxdr">
@@ -85,7 +85,7 @@
       </node>
     </node>
     <node concept="3nhxis" id="4pVqDb3G8cS" role="3nhxdB">
-      <property role="TrG5h" value="SmartCampusTemperature" />
+      <property role="TrG5h" value="SC_Temperature" />
       <node concept="3nhxdC" id="4pVqDb3GlAH" role="3nhxdx">
         <property role="TrG5h" value="t" />
         <node concept="3nhxd0" id="4pVqDb3GlAR" role="3nhxdr">
@@ -100,7 +100,7 @@
       </node>
     </node>
     <node concept="3nhxis" id="4pVqDb3GlB9" role="3nhxdB">
-      <property role="TrG5h" value="SmartCampusShame" />
+      <property role="TrG5h" value="SC_Shame" />
       <node concept="3nhxdD" id="4pVqDb3GlBF" role="3nhxdx">
         <property role="TrG5h" value="time" />
         <property role="3nhxdS" value="Intersection" />
@@ -110,11 +110,11 @@
           </node>
         </node>
         <node concept="25MzdI" id="4pVqDb3H3Cr" role="3nhxd5">
-          <ref role="25MzdJ" node="4pVqDb3G8cS" resolve="SmartCampusTemperature" />
+          <ref role="25MzdJ" node="4pVqDb3G8cS" resolve="SC_Temperature" />
           <ref role="25MzdH" node="4pVqDb3GlAH" resolve="t" />
         </node>
         <node concept="25MzdI" id="4pVqDb3H3Cu" role="3nhxd5">
-          <ref role="25MzdJ" node="7f4vQq$wBzx" resolve="SmartCampusOpenClose" />
+          <ref role="25MzdJ" node="7f4vQq$wBzx" resolve="SC_OpenClose" />
           <ref role="25MzdH" node="7f4vQq$wBzF" resolve="time" />
         </node>
       </node>
@@ -140,6 +140,12 @@
       <node concept="3nhyhy" id="7f4vQq$wApj" role="3nhy9P">
         <property role="3nhy95" value="Floor" />
         <property role="TrG5h" value="4" />
+        <node concept="3nhx$1" id="4pVqDb3Hdb7" role="3nhy9P">
+          <property role="TrG5h" value="door_SPARKS" />
+          <property role="3nhx$4" value="localhost/data/door_sparks.json" />
+          <property role="3nhx$e" value="the stairs door is opened or closed" />
+          <ref role="3nhwpS" node="7f4vQq$wBzx" resolve="SC_OpenClose" />
+        </node>
         <node concept="3nhyhy" id="4pVqDb3Getw" role="3nhy9P">
           <property role="3nhy95" value="Office" />
           <property role="TrG5h" value="444" />
@@ -147,7 +153,7 @@
             <property role="TrG5h" value="temp_444" />
             <property role="3nhx$4" value="localhost/data/temp444.json" />
             <property role="3nhx$3" value="1" />
-            <ref role="3nhwpS" node="4pVqDb3G8cS" resolve="SmartCampusTemperature" />
+            <ref role="3nhwpS" node="4pVqDb3G8cS" resolve="SC_Temperature" />
           </node>
         </node>
         <node concept="3nhyhy" id="7f4vQq$wApp" role="3nhy9P">
@@ -157,19 +163,19 @@
             <property role="TrG5h" value="temp_443" />
             <property role="3nhx$4" value="localhost/data/temp443.json" />
             <property role="3nhx$3" value="2" />
-            <ref role="3nhwpS" node="4pVqDb3G8cS" resolve="SmartCampusTemperature" />
+            <ref role="3nhwpS" node="4pVqDb3G8cS" resolve="SC_Temperature" />
           </node>
           <node concept="3nhx$1" id="7f4vQq$wB$n" role="3nhy9P">
             <property role="TrG5h" value="door_443" />
             <property role="3nhx$4" value="localhost/data/door443.json" />
             <property role="3nhx$e" value="the door is closed or opened" />
-            <ref role="3nhwpS" node="7f4vQq$wBzx" resolve="SmartCampusOpenClose" />
+            <ref role="3nhwpS" node="7f4vQq$wBzx" resolve="SC_OpenClose" />
           </node>
           <node concept="3nhx$1" id="4pVqDb3H6ol" role="3nhy9P">
             <property role="TrG5h" value="OvenOrFridge443" />
             <property role="3nhx$4" value="localhost/data/ovenfridge443" />
             <property role="3nhx$e" value="the door is closed or opened and the temperature sensor is up" />
-            <ref role="3nhwpS" node="4pVqDb3GlB9" resolve="SmartCampusShame" />
+            <ref role="3nhwpS" node="4pVqDb3GlB9" resolve="SC_Shame" />
           </node>
         </node>
       </node>
