@@ -1,4 +1,4 @@
-package shared
+package fr.i3s.modalis.sensordeploiement.language.shared
 
 /**
  * Data Type trait
@@ -34,7 +34,7 @@ case class LongType(val value:Long) extends AtomicType
 case class StringType(val value:String) extends AtomicType
 
 /**
- * Represent SmartCampus Sensor Data
+ * Represent SmartCampus fr.i3s.modalis.sensordeploiement.language.Sensor Data
  */
 case class SmartCampusType(val value:(String, Int, Long)) extends CompositeType {
   val bindings = Map("n" -> new StringType(value._1),
@@ -43,7 +43,7 @@ case class SmartCampusType(val value:(String, Int, Long)) extends CompositeType 
 }
 
 /**
- * Represent Santander Parking Sensor Data
+ * Represent Santander Parking fr.i3s.modalis.sensordeploiement.language.Sensor Data
  */
 case class SantanderParkingType(val value:(Int, String, Double, Int)) extends CompositeType {
   val bindings = Map("nodeId" -> new IntegerType(value._1),

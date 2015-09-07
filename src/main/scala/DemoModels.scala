@@ -1,27 +1,27 @@
-import models.organizational.{Door, Window, SmartBuilding, Office}
-import models.software._
-import shared.Sensor
+import fr.i3s.modalis.sensordeploiement.language._
+import fr.i3s.modalis.sensordeploiement.language.shared.{IntegerType, StringType}
 
 /**
  * Created by Cyril Cecchinel - I3S Laboratory on 06/08/15.
  */
 object DemoModels extends App{
 
-  /** sensors **/
-  val sen_door443 = Sensor("DOOR_443")
-  val sen_temp443 = Sensor("TEMP_443")
-  val sen_light443 = Sensor("LIGHT_443")
-  /** Sensors description **/
-  val des_door443 = SensorDescription(sen_door443, EventEmission(), Opening())
-  val des_temp443 = SensorDescription(sen_temp443, PeriodicEmission(300), Temperature())
-  val des_light443 = SensorDescription(sen_light443, PeriodicEmission(300), Light())
+  /* Time */
+  val timefield = AtomicField("time", Continuous(Some(IntegerType(0)), None))
 
-  /** Building description **/
+  /* fr.i3s.modalis.sensordeploiement.language.Observation patterns */
+  val SC_OpenClose = Observation("SC_OpenClose", timefield, Set(AtomicField("state", Discrete(Set(StringType("OPENED"), StringType("CLOSED"))))))
+  val SC_Temperature = Observation("SC_Temperature", timefield, Set(AtomicField("v", Continuous(Some(IntegerType(Int.MinValue)), Some(IntegerType(Int.MaxValue))))))
 
 
-  val office443 = new Office("o443", Set(sen_door443, sen_light443, sen_temp443), Set(Window("win443")), Set(Door("d1")))
 
-  val templiers1 = new SmartBuilding("templiers1", Set(office443))
+  val templiers = new Container("Templiers 1", EContainerType.Building, Set(new Container("Floor 4", EContainerType.Floor, Set(
+    EventBased("door_SPARKS","when the stairs door is opened or closed", "localhost/data/door_sparks.json", SC_OpenClose),
+    new Container("Office 444", EContainerType.Room, Set(Periodic("temp_444", 10, "localhost/data/temp_444.json", SC_Temperature)))
+  ))))
+
+
+
 
 
 }
