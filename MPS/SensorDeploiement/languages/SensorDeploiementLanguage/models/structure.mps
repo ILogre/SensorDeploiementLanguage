@@ -119,6 +119,22 @@
       <property role="1uS6qo" value="Building" />
       <property role="1uS6qv" value="Building" />
     </node>
+    <node concept="M4N5e" id="1N9OOSpPEmx" role="M5hS2">
+      <property role="1uS6qv" value="Wall" />
+      <property role="1uS6qo" value="Wall" />
+    </node>
+    <node concept="M4N5e" id="1N9OOSpPEmB" role="M5hS2">
+      <property role="1uS6qv" value="Furniture" />
+      <property role="1uS6qo" value="Furniture" />
+    </node>
+    <node concept="M4N5e" id="1N9OOSpPH63" role="M5hS2">
+      <property role="1uS6qv" value="Door" />
+      <property role="1uS6qo" value="Door" />
+    </node>
+    <node concept="M4N5e" id="1N9OOSpPH6b" role="M5hS2">
+      <property role="1uS6qv" value="Window" />
+      <property role="1uS6qo" value="Window" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7f4vQq$wApx">
     <property role="TrG5h" value="Sensor" />
@@ -131,10 +147,6 @@
       <property role="20kJfa" value="observes" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7f4vQq$wAJU" resolve="Observation" />
-    </node>
-    <node concept="1TJgyi" id="7f4vQq$wApy" role="1TKVEl">
-      <property role="TrG5h" value="uri" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
   <node concept="1TIwiD" id="7f4vQq$wAp$">
@@ -209,6 +221,10 @@
       <property role="TrG5h" value="operator" />
       <ref role="AX2Wp" node="7f4vQq$wAKg" resolve="EOperator" />
     </node>
+    <node concept="1TJgyi" id="1N9OOSpPMJU" role="1TKVEl">
+      <property role="TrG5h" value="function" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="AxPO7" id="7f4vQq$wAKg">
     <property role="TrG5h" value="EOperator" />
@@ -230,6 +246,10 @@
     <node concept="M4N5e" id="7f4vQq$wAKp" role="M5hS2">
       <property role="1uS6qv" value="Offset" />
       <property role="1uS6qo" value="Offset" />
+    </node>
+    <node concept="M4N5e" id="1N9OOSpPJZ5" role="M5hS2">
+      <property role="1uS6qv" value="Function" />
+      <property role="1uS6qo" value="Function" />
     </node>
   </node>
   <node concept="1TIwiD" id="7f4vQq$wAKw">
