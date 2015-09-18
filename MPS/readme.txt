@@ -1,4 +1,4 @@
-This implementation of the Smart Campus sensor deployement language use MPS 3.3 EAP.
+This implementation of the SmartCampus sensor deployment language use MPS 3.3 EAP.
 
 To do :
 	Constraints :
