@@ -7,10 +7,10 @@ package fr.i3s.modalis.sensordeploiement.language
  */
 object EContainerType extends Enumeration {
   type EContainerType = Value
-  val Building, Floor, Corridor, Room, Campus, Parking, Unknown = Value
+  val Building, Floor, Corridor, Room, Campus, Parking, OpenSpace, Unknown = Value
 }
 import fr.i3s.modalis.sensordeploiement.language.EContainerType._
 
 trait Containable
 
-class Container(val name:String, val cType:EContainerType, val contains:Set[Containable] = Set.empty) extends Containable
+case class Container(name:String, cType:EContainerType, contains:Set[Containable] = Set.empty) extends Containable
