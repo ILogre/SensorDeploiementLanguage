@@ -1,7 +1,7 @@
-package fr.i3s.modalis.sensordeploiement.language.dsl
+package fr.i3s.modalis.cosmic.organizational.dsl
 
-import fr.i3s.modalis.sensordeploiement.language.shared.{IntegerType, DataType}
-import fr.i3s.modalis.sensordeploiement.language._
+import fr.i3s.modalis.cosmic.organizational._
+import fr.i3s.modalis.cosmic.organizational.shared.{DataType, IntegerType}
 
 /**
  * DSL definition

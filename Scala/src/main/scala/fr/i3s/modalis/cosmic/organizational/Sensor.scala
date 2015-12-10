@@ -1,4 +1,4 @@
-package fr.i3s.modalis.sensordeploiement.language
+package fr.i3s.modalis.cosmic.organizational
 
 /**
  * Concepts related to sensors

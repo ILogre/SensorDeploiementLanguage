@@ -1,4 +1,4 @@
-package fr.i3s.modalis.sensordeploiement.language.shared
+package fr.i3s.modalis.cosmic.organizational.shared
 
 /**
  * Data Type trait

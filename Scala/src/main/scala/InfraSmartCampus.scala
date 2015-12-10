@@ -1,5 +1,5 @@
-import fr.i3s.modalis.sensordeploiement.language._
-import fr.i3s.modalis.sensordeploiement.language.shared.{StringType, IntegerType}
+import fr.i3s.modalis.cosmic.organizational._
+import fr.i3s.modalis.cosmic.organizational.shared.{IntegerType, StringType}
 
 /**
  * Created by Cyril Cecchinel - I3S Laboratory on 26/10/15.

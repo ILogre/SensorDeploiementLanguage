@@ -1,5 +1,5 @@
-import fr.i3s.modalis.sensordeploiement.language._
-import fr.i3s.modalis.sensordeploiement.language.shared.{IntegerType, StringType}
+import fr.i3s.modalis.cosmic.organizational._
+import fr.i3s.modalis.cosmic.organizational.shared.{IntegerType, StringType}
 
 /**
  * Created by Cyril Cecchinel - I3S Laboratory on 06/08/15.
@@ -9,7 +9,7 @@ object DemoModels extends App{
   /* Time */
   val timefield = AtomicField("time", Continuous(Some(IntegerType(0)), None))
 
-  /* fr.i3s.modalis.sensordeploiement.language.Observation patterns */
+  /* fr.i3s.modalis.cosmic.organizational.Observation patterns */
   val SC_OpenClose = Observation("SC_OpenClose", timefield, Set(AtomicField("state", Discrete(Set(StringType("OPENED"), StringType("CLOSED"))))))
   val SC_Temperature = Observation("SC_Temperature", timefield, Set(AtomicField("v", Continuous(Some(IntegerType(Int.MinValue)), Some(IntegerType(Int.MaxValue))))))
 

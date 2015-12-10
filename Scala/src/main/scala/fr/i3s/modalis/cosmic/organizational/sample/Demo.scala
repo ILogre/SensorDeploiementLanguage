@@ -1,8 +1,7 @@
-package fr.i3s.modalis.sensordeploiement.language.sample
+package fr.i3s.modalis.cosmic.organizational.sample
 
-import fr.i3s.modalis.sensordeploiement.language.Observation
-import fr.i3s.modalis.sensordeploiement.language.dsl.ObservationPatterns
-import fr.i3s.modalis.sensordeploiement.language.shared.{IntegerType, StringType}
+import fr.i3s.modalis.cosmic.organizational.dsl.ObservationPatterns
+import fr.i3s.modalis.cosmic.organizational.shared.StringType
 
 /**
  * Example of use
