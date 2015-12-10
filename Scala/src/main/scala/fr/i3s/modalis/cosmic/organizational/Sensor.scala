@@ -5,7 +5,6 @@ package fr.i3s.modalis.cosmic.organizational
  * Created by Cyril Cecchinel - I3S Laboratory on 07/09/15.
  */
 trait Sensor extends Containable {
-  val name:String
   val uri:String
   val observes:Observation
 }

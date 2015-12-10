@@ -1,3 +1,5 @@
+package fr.i3s.modalis.cosmic.organizational.sample
+
 import fr.i3s.modalis.cosmic.organizational._
 import fr.i3s.modalis.cosmic.organizational.shared.{IntegerType, StringType}
 
@@ -16,7 +18,7 @@ object InfraSmartCampus {
   val SC_opening = Observation("OPENING", timefield, Set(AtomicField("v", Discrete(Set(StringType("OPEN"), StringType("CLOSED"))))))
   val SC_power = Observation("POWER", timefield, Set(AtomicField("v", Continuous(Some(IntegerType(0)), Some(IntegerType(2500))))))
 
-  val instractucture = Container("Campus SophiaTech", EContainerType.Campus, Set(
+  val infrastructure = Container("Campus SophiaTech", EContainerType.Campus, Set(
     Periodic("TEMP_CAMPUS", 300, "http://smartcampus.unice.fr/sensors/TEMP_CAMPUS/data/", SC_temperature_outdoor),
     Container("Templiers Ouest", EContainerType.Building, Set(
       Container("4th floor", EContainerType.Floor, Set(
@@ -60,5 +62,7 @@ object InfraSmartCampus {
       ))
     ))
   ))
+
+  val catalog = Catalog("SmartCampus", infrastructure,  Set(SC_temperature_indoor, SC_temperature_outdoor, SC_light, SC_noise, SC_opening, SC_power))
 }
 
