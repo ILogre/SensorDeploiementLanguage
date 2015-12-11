@@ -21,4 +21,6 @@ object SmartCampusObservation extends App with ObservationPatterns{
 
   }
 
+  println(this.observations)
+
 }
