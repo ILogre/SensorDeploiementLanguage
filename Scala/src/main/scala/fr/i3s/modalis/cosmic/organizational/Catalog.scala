@@ -14,7 +14,7 @@ case class Catalog(name:String, root:Container, patterns:Set[Observation]) {
   def getSensor(name:String): Option[Sensor] = {
     val lookup = getElement(name)
     lookup match {
-      case a:Option[Sensor] => a
+      case a:Option[Sensor @unchecked] => a
       case _ => None
     }
   }
@@ -23,7 +23,7 @@ case class Catalog(name:String, root:Container, patterns:Set[Observation]) {
   def getContainer(name:String):Option[Container] = {
     val lookup = getElement(name)
     lookup match {
-      case a:Option[Container] => a
+      case a:Option[Container @unchecked] => a
       case _ => None
     }
   }
